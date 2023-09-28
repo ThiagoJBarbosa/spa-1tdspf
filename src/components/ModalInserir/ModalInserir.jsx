@@ -51,6 +51,9 @@ export default function ModalInserir(props) {
                         <label htmlFor="idImg">Imagem</label>
                         <input type="url" name="imagem" id="idImg" placeholder="Digite a URL da imagem para o produto" />
                     </div>
+                    <div>
+                        <button>CADASTRAR</button>
+                    </div>
                 </fieldset>
             </form>
         </div>

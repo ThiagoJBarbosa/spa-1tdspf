@@ -1,13 +1,13 @@
-// Criando variaveis no SASS:
-$bgColor:#ff0000;
-$txtColor:#fff;
-$displayView:block;
-$bordaArrendondada: 5px;
+//Criando vairaveis no SASS:
 
-// Criando um agrupamento de estilos, chamamos de MIXING
+$bgColor: #ff0000;
+$txtColor: #fff;
+$displayView: block;
+$bordaArredondada:5px;
 
-@mixin estiloPadraoForm($tamanhoFont, $familiaFonte, $corFonte){
-
+//Criando um agrupando de estilos, chamamos de MIXING:
+@mixin estiloPadraoForm($tamanhoFonte, $familiaFonte, $corFonte){
+    
     form{
         font-family: $familiaFonte;
         font-size: $tamanhoFonte;
@@ -20,12 +20,50 @@ $bordaArrendondada: 5px;
 
         input{
             display: $displayView;
-            border-radius: $bordaArrendondada;
+            border-radius: $bordaArredondada;
+
         }
     }
 }
-
 $estiloDaFonte: Arial, Helvetica, sans-serif;
+
 .formGroup{
-    @include estiloPadraoForm(1.5rem, $estiloDaFonte, #040532)
+    @include estiloPadraoForm(1.5rem, $estiloDaFonte, #040532);
+    
+    form{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    input{
+        border: 0 solid transparent;
+        width: 70%;
+        height: 40px;
+        margin: 1% auto;
+        padding: 0 10px ;
+    }
+    
+    label{
+        color: white;
+        margin: 0 auto;
+        width: 70%;
+    }
+
+    legend{
+        color: $txtColor;
+    }
+
+    button{
+        font-weight: bold;
+        border: 0 solid transparent;
+        border-radius: $bordaArredondada;
+        margin: 2px auto;
+        display: $displayView;
+        height: 50%;
+        width: 40%;
+        background-color: green;
+        color: $txtColor;
+        font-size: 1.5rem;
+    }
+
 }
